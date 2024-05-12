@@ -2,6 +2,12 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkSocial.Api", "CwkSocial.Api\CwkSocial.Api.csproj", "{EF9804E6-1490-440F-B44F-690F6CAA320B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkSocial.Domain", "CwkSocial.Domain\CwkSocial.Domain.csproj", "{7FC5EAF7-76E2-48FF-8B57-ECE75A31B034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkSocial.Application", "CwkSocial.Application\CwkSocial.Application.csproj", "{3841ECF8-86F2-4487-B6B4-18E624AD47B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CwkSocial.Dal", "CwkSocial.Dal\CwkSocial.Dal.csproj", "{82CD8FBD-6CC7-4A8A-8C8B-E5B3AFEF70FE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +18,17 @@ Global
 		{EF9804E6-1490-440F-B44F-690F6CAA320B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF9804E6-1490-440F-B44F-690F6CAA320B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF9804E6-1490-440F-B44F-690F6CAA320B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FC5EAF7-76E2-48FF-8B57-ECE75A31B034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FC5EAF7-76E2-48FF-8B57-ECE75A31B034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FC5EAF7-76E2-48FF-8B57-ECE75A31B034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FC5EAF7-76E2-48FF-8B57-ECE75A31B034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3841ECF8-86F2-4487-B6B4-18E624AD47B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3841ECF8-86F2-4487-B6B4-18E624AD47B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3841ECF8-86F2-4487-B6B4-18E624AD47B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3841ECF8-86F2-4487-B6B4-18E624AD47B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82CD8FBD-6CC7-4A8A-8C8B-E5B3AFEF70FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82CD8FBD-6CC7-4A8A-8C8B-E5B3AFEF70FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82CD8FBD-6CC7-4A8A-8C8B-E5B3AFEF70FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82CD8FBD-6CC7-4A8A-8C8B-E5B3AFEF70FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
