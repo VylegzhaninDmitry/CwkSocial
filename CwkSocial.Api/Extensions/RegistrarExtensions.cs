@@ -6,11 +6,8 @@ public static class RegistrarExtensions
 {
     public static void RegisterServices(this WebApplicationBuilder builder, Type scanningType)
     {
-        var registrars = scanningType.Assembly.GetTypes()
-            .Where(i => i.IsAssignableTo(typeof(IWebApplicationBuilderRegistrar)) && i is { IsAbstract: false, IsInterface: false })
-            .Select(Activator.CreateInstance)
-            .Cast<IWebApplicationBuilderRegistrar>();
-
+        var registrars = GetRegistrars<IWebApplicationBuilderRegistrar>(scanningType);
+        
         foreach (var registrar in registrars)
         {
             registrar.RegisterServices(builder);
@@ -19,14 +16,17 @@ public static class RegistrarExtensions
 
     public static void RegisterPipelineComponents(this WebApplication app, Type scanningType)
     {
-        var registrars = scanningType.Assembly.GetTypes()
-            .Where(i => i.IsAssignableTo(typeof(IWebApplicationRegistrar)) && i is { IsAbstract: false, IsInterface: false })
-            .Select(Activator.CreateInstance)
-            .Cast<IWebApplicationRegistrar>();
+        var registrars = GetRegistrars<IWebApplicationRegistrar>(scanningType);
 
         foreach (var registrar in registrars)
         {
             registrar.RegisterPipelineComponents(app);
         }
     }
+
+    private static IEnumerable<T> GetRegistrars<T>(Type scanningType) where T : IRegistrar
+        =>  scanningType.Assembly.GetTypes()
+            .Where(i => i.IsAssignableTo(typeof(T)) && i is { IsAbstract: false, IsInterface: false })
+            .Select(Activator.CreateInstance)
+            .Cast<T>();
 }
