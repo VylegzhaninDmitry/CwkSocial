@@ -1,5 +1,5 @@
 ﻿using Asp.Versioning;
-using Cwk.Domain.Models;
+using Cwk.Domain.Aggregates.PostAggregate;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CwkSocial.Api.Controllers.V2;
@@ -13,8 +13,8 @@ public class PostController: Controller
     [Route("{id:int}")]
     public IActionResult GetById(int id)
     {
-        var post = new Post { Id = id, Text = "Hello v2!"};
+        //var post = new Post { PostId = new Guid(), TextContent = "Hello v2!"};
 
-        return Ok(post);
+        return Ok(id);
     }
 }
